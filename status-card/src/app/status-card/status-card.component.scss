@@ -1,0 +1,21 @@
+@import '../constants/mixins.scss';
+
+.card {
+    @include card;
+}
+
+.image .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:99.8%;
+    opacity:0;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+.image:hover .after {
+    background: rgba(139, 31, 200, 0.6);
+    opacity:0.8;
+}

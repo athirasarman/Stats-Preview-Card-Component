@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+@mixin card {
+    display: flex;
+    flex-direction: column;
+    background-color: $card-background;
+    border-radius: 12px;
+    margin: 12px;
+    font-family: $default-font-family;
+
+    .image {
+        position: relative;        
+        width: 100%;
+        img {
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+            width: 100%;
+        }
+    } 
+
+    .heading {
+        margin: 12px;
+        text-align: center;
+        color: $main-heading;
+
+        .insight {
+            color: $accent;
+        }
+    }
+
+    .content{
+        margin: 0 12px 12px 12px;
+        text-align: center;
+        color: $main-heading;
+        font-size:12px;
+        font-weight: $sm-font-weight;
+        display: flex;
+        flex-direction: column;
+
+        .blocks{
+            
+            .heading{
+                color: $main-heading;
+            }
+            .text{
+
+            }
+        }
+    }
+}
