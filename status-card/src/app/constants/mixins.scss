@@ -19,7 +19,7 @@
     } 
 
     .heading {
-        margin: 12px;
+        margin: 12px 12px 0 12px;
         text-align: center;
         color: $main-heading;
 
@@ -32,18 +32,22 @@
         margin: 0 12px 12px 12px;
         text-align: center;
         color: $main-heading;
-        font-size:12px;
+        font-size:14px;
         font-weight: $sm-font-weight;
         display: flex;
         flex-direction: column;
-
+        line-height: 1.5;
+        .description{
+            margin:0 30px;
+        }
         .blocks{
-            
             .heading{
-                color: $main-heading;
+                font-size:2em;
+                font-weight:700;
             }
             .text{
-
+                font-size: 12px;
+                font-weight: 400;
             }
         }
     }
