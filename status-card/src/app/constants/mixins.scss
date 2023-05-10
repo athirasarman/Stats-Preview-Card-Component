@@ -1,6 +1,7 @@
-@import './variables.scss';
+@import "./variables.scss";
 
-@mixin card {
+@mixin card-for-mobile {
+  @media only screen and (max-width: 680px) {
     display: flex;
     flex-direction: column;
     background-color: $card-background;
@@ -9,46 +10,119 @@
     font-family: $default-font-family;
 
     .image {
-        position: relative;        
+      position: relative;
+      width: 100%;
+      img {
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
         width: 100%;
-        img {
-            border-top-right-radius: 12px;
-            border-top-left-radius: 12px;
-            width: 100%;
-        }
-    } 
+      }
+    }
 
     .heading {
-        margin: 12px 12px 0 12px;
-        text-align: center;
-        color: $main-heading;
+      margin: 12px 12px 0 12px;
+      text-align: center;
+      color: $main-heading;
 
-        .insight {
-            color: $accent;
-        }
+      .insight {
+        color: $accent;
+      }
     }
 
-    .content{
-        margin: 0 12px 12px 12px;
-        text-align: center;
-        color: $main-heading;
-        font-size:14px;
-        font-weight: $sm-font-weight;
+    .content {
+      margin: 0 12px 12px 12px;
+      text-align: center;
+      color: $main-heading;
+      font-size: 14px;
+      font-weight: $sm-font-weight;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      .description {
+        margin: 0 30px;
+      }
+      .blocks {
+        .heading {
+          font-size: 2em;
+          font-weight: 700;
+        }
+        .text {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@mixin card-for-desktop {
+  @media only screen and (min-width: 681px) {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: $card-background;
+    border-radius: 12px;
+    margin: 12px;
+    font-family: $default-font-family;
+
+    .second-half {
+      margin: 60px;
+      flex: 1;
+    }
+    .first-half {
+      flex: 1;
+
+      .image {
+        position: relative;
+        width: 100%;
+        height:100%;
+        img {
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .heading {
+      margin: 12px 12px 0 12px;
+      text-align: left;
+      color: $main-heading;
+
+      .insight {
+        color: $accent;
+      }
+    }
+
+    .content {
+      margin: 0 12px 12px 12px;
+      text-align: center;
+      color: $main-heading;
+      font-size: 14px;
+      font-weight: $sm-font-weight;
+      display: flex;
+      flex-direction: column;
+      line-height: 2;
+      .description {
+        margin: 0 95px 0 0;
+        text-align: left;
+      }
+      .block-group{
+        flex-direction: row;
         display: flex;
-        flex-direction: column;
-        line-height: 1.5;
-        .description{
-            margin:0 30px;
+        .blocks {
+            text-align: left;
+            margin-right:90px;
+          .block-heading {
+            font-size: 2em;
+            font-weight: 700;
+          }
+          .text {
+            font-size: 12px;
+            font-weight: 400;
+          }
         }
-        .blocks{
-            .heading{
-                font-size:2em;
-                font-weight:700;
-            }
-            .text{
-                font-size: 12px;
-                font-weight: 400;
-            }
-        }
+      }
     }
+  }
 }
