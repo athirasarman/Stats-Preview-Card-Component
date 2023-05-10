@@ -40,8 +40,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/athirasarman/Stats-Preview-Card-Component/)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com](https://athirasarman.github.io/Stats-Preview-Card-Component/)
+- Solution URL: https://github.com/athirasarman/Stats-Preview-Card-Component/
+- Live Site URL: https://athirasarman.github.io/Stats-Preview-Card-Component/
 
 ## My process
 
